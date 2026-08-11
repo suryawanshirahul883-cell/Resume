@@ -1,2 +1,2 @@
-# resume
+# Resume
 the apply job 
