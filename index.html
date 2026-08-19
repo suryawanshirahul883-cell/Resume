@@ -465,72 +465,73 @@
 
 
     .education-card p {
-    margin: 10px 0;
-    font-size: 14px !important;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #5c6b82;
-    line-height: 1.7;
-    padding-left: 10px;
-    transition: 0.3s ease;
-}
+        margin: 10px 0;
+        font-size: 14px !important;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #5c6b82;
+        line-height: 1.7;
+        padding-left: 10px;
+        transition: 0.3s ease;
+    }
 
-.education-card p:hover {
-    color: #222;
-    padding-left: 15px;
-    letter-spacing: 1.5px;
-}
+    .education-card p:hover {
+        color: #222;
+        padding-left: 15px;
+        letter-spacing: 1.5px;
+    }
 
-   .percentage {
-    text-decoration:overline;
-    text-transform: none;
-    text-decoration: none !important;
+    .percentage {
+        text-decoration: overline;
+        text-transform: none;
+        text-decoration: none !important;
 
-    display: inline-block;
+        display: inline-block;
 
-    padding: 0;
+        padding: 0;
 
-    color: #2563eb;
+        color: #2563eb;
 
-    background: none;
-    border: none;
-    border-radius: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
 
-    font-weight: 700;
-    font-size: 14px;
+        font-weight: 700;
+        font-size: 14px;
 
-    letter-spacing: 0.5px;
+        letter-spacing: 0.5px;
 
-    box-shadow: none;
+        box-shadow: none;
 
-    transition: all 0.3s ease;
+        transition: all 0.3s ease;
 
-    cursor: pointer;
-}
+        cursor: pointer;
+    }
 
-/* Hover Effect */
-.percentage:hover {
-    text-decoration: none !important;
-    color: #1d4ed8;
+    /* Hover Effect */
+    .percentage:hover {
+        text-decoration: none !important;
+        color: #1d4ed8;
 
-    transform: translateY(-2px);
-    box-shadow: none;
-}
+        transform: translateY(-2px);
+        box-shadow: none;
+    }
 
-.percentage,
-.percentage a {
-    text-decoration: none !important;
-    color: #2563eb;
-}
+    .percentage,
+    .percentage a {
+        text-decoration: none !important;
+        color: #2563eb;
+    }
 
-/* जर percentage स्वतः link असेल */
-a.percentage {
-    text-decoration: none !important;
-}
+    /* जर percentage स्वतः link असेल */
+    a.percentage {
+        text-decoration: none !important;
+    }
 
-a.percentage:hover {
-    text-decoration: none !important;
-}
+    a.percentage:hover {
+        text-decoration: none !important;
+    }
+
     /* ==================================
    SKILLS
 ================================== */
@@ -774,6 +775,738 @@ a.percentage:hover {
         }
 
     }
+
+    /* ==================================
+       PROJECTS / CERTIFICATIONS / SOFT SKILLS
+    ================================== */
+    .project-grid,
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .project-card,
+    .cert-card {
+        padding: 22px;
+        background: #f1f7ff;
+        border: 1px solid #dbeafe;
+        border-radius: 15px;
+        transition: 0.35s ease;
+    }
+
+    .project-card:hover,
+    .cert-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 30px rgba(37, 99, 235, 0.18);
+    }
+
+    .project-card h3,
+    .cert-card h3 {
+        color: #0f4c81;
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .project-card p,
+    .cert-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .soft-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .profile-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .profile-links a,
+    .download-btn {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 25px;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+
+    .profile-links a:hover,
+    .download-btn:hover {
+        transform: translateY(-3px);
+        background: #0f4c81;
+    }
+
+    .download-area {
+        text-align: center;
+        padding: 0 0 25px;
+    }
+
+    @media (max-width: 768px) {
+
+        .project-grid,
+        .cert-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media print {
+        .download-area {
+            display: none;
+        }
+    }
+
+
+    /* =========================================
+       MODERN LIVE RESUME DESIGN
+    ========================================= */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .resume {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, .45);
+        transition: all .4s ease;
+    }
+
+    .resume-header {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .resume-header::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .08);
+        top: -100px;
+        right: 180px;
+        animation: floatingCircle 6s ease-in-out infinite;
+    }
+
+    .resume-header::after {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .06);
+        bottom: -80px;
+        left: 100px;
+        animation: floatingCircle 5s ease-in-out infinite reverse;
+    }
+
+    .header-info,
+    .profile-image {
+        position: relative;
+        z-index: 2;
+    }
+
+    .resume-header h1 {
+        animation: fadeInLeft 1s ease;
+    }
+
+    .job-title {
+        animation: fadeInLeft 1.3s ease;
+    }
+
+    .profile-image {
+        animation: profileAnimation 1.2s ease;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.08) rotate(2deg);
+    }
+
+    .contact-bar {
+        box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08);
+    }
+
+    .contact-bar a {
+        padding: 7px 12px;
+        border-radius: 8px;
+        transition: all .3s ease;
+    }
+
+    .contact-bar a:hover {
+        background: rgba(255, 255, 255, .10);
+        transform: translateY(-2px);
+    }
+
+    .section-title {
+        position: relative;
+        transition: .3s ease;
+    }
+
+    .section-title:hover {
+        transform: translateX(5px);
+    }
+
+    .education-card,
+    .project-card,
+    .cert-card {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .education-card::before,
+    .project-card::before,
+    .cert-card::before {
+        content: "";
+        position: absolute;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, .08);
+        top: -35px;
+        right: -35px;
+        transition: .4s ease;
+    }
+
+    .education-card:hover::before,
+    .project-card:hover::before,
+    .cert-card:hover::before {
+        transform: scale(2);
+    }
+
+    .education-card h3,
+    .education-card p,
+    .education-card .percentage,
+    .project-card h3,
+    .project-card p,
+    .project-card .skills,
+    .cert-card h3,
+    .cert-card p {
+        position: relative;
+        z-index: 1;
+    }
+
+    .project-card {
+        background: linear-gradient(145deg, #f8fbff, #eef6ff);
+    }
+
+    .project-card::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #2563eb;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: .4s ease;
+    }
+
+    .project-card:hover::after {
+        transform: scaleY(1);
+    }
+
+    .project-card h3 {
+        transition: .3s ease;
+    }
+
+    .project-card:hover h3 {
+        color: #2563eb;
+    }
+
+    .skill {
+        cursor: default;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .skill::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #2563eb;
+        transition: .3s ease;
+        z-index: -1;
+    }
+
+    .skill:hover::before {
+        width: 100%;
+    }
+
+    .skill:hover {
+        color: white;
+        transform: translateY(-5px) scale(1.03);
+    }
+
+    .language-list li {
+        transition: .3s ease;
+        border: 1px solid transparent;
+    }
+
+    .language-list li:hover {
+        transform: translateY(-4px);
+        border-color: #bfdbfe;
+        background: #eaf3ff;
+        color: #0f4c81;
+    }
+
+    .profile-links a,
+    .download-btn {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(37, 99, 235, .20);
+    }
+
+    .profile-links a:hover,
+    .download-btn:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 12px 28px rgba(37, 99, 235, .30);
+    }
+
+    .resume-footer {
+        position: relative;
+        overflow: hidden;
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-35px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes profileAnimation {
+        from {
+            opacity: 0;
+            transform: scale(.7);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes floatingCircle {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(20px);
+        }
+    }
+
+    @media (max-width:768px) {
+        body {
+            padding: 8px;
+        }
+
+        .resume {
+            border-radius: 12px;
+        }
+
+        .resume-header {
+            padding: 28px 15px;
+        }
+
+        .resume-header h1 {
+            font-size: 27px;
+        }
+
+        .profile-image {
+            width: 115px;
+            height: 115px;
+        }
+
+        .contact-bar {
+            gap: 8px;
+        }
+
+        .contact-bar a {
+            width: 100%;
+            text-align: center;
+        }
+
+        .resume-content {
+            padding: 10px 15px 25px;
+        }
+
+        .section-title {
+            font-size: 19px;
+        }
+
+        .project-card,
+        .education-card {
+            padding: 18px;
+        }
+    }
+
+    @media (max-width:420px) {
+        .resume-header h1 {
+            font-size: 23px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        .skill {
+            font-size: 12px;
+            padding: 8px 12px;
+        }
+
+        .project-card h3 {
+            font-size: 16px;
+        }
+    }
+
+    @media print {
+        body {
+            background: white !important;
+        }
+
+        .resume {
+            box-shadow: none !important;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .project-card,
+        .education-card {
+            break-inside: avoid;
+        }
+
+        .download-area {
+            display: none !important;
+        }
+    }
+
+
+    /* =========================================
+       EXTRA PROFESSIONAL RESUME UI
+    ========================================= */
+
+    /* Cleaner page background */
+    body {
+        background:
+            radial-gradient(circle at 10% 10%, rgba(37, 99, 235, .12), transparent 28%),
+            radial-gradient(circle at 90% 90%, rgba(14, 116, 144, .12), transparent 30%),
+            linear-gradient(135deg, #eef5ff, #f8fbff);
+    }
+
+    /* Header polish */
+    .resume-header {
+        min-height: 220px;
+    }
+
+    .resume-header h1 {
+        letter-spacing: 1.5px;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+    }
+
+    .job-title:empty {
+        display: none;
+    }
+
+    /* Contact links as professional pills */
+    .contact-bar {
+        align-items: center;
+    }
+
+    .contact-bar a {
+        background: rgba(255, 255, 255, .06);
+        border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    /* Section divider */
+    .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        margin-left: 8px;
+        background: linear-gradient(90deg, #bfdbfe, transparent);
+    }
+
+    /* Education / project cards */
+    .education-card,
+    .project-card {
+        box-shadow: 0 8px 25px rgba(15, 76, 129, .07);
+    }
+
+    .education-card:hover,
+    .project-card:hover {
+        box-shadow: 0 18px 38px rgba(15, 76, 129, .14);
+    }
+
+    /* Project technology tags */
+    .project-card .skill {
+        font-size: 11px;
+        padding: 7px 11px;
+    }
+
+    /* Strengths section */
+    .soft-skills {
+        gap: 10px;
+    }
+
+    /* Online profile buttons */
+    .profile-links a {
+        min-width: 105px;
+        text-align: center;
+    }
+
+    /* Footer */
+    .resume-footer {
+        letter-spacing: .4px;
+    }
+
+    /* Subtle entrance animation */
+    .resume-content>h2,
+    .resume-content>p,
+    .education-card,
+    .project-card,
+    .language-list li {
+        animation: contentReveal .7s ease both;
+    }
+
+    .education-card:nth-child(2),
+    .project-card:nth-child(2) {
+        animation-delay: .08s;
+    }
+
+    @keyframes contentReveal {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Better mobile spacing */
+    @media (max-width: 768px) {
+        .section-title::after {
+            display: none;
+        }
+
+        .contact-bar a {
+            padding: 9px 10px;
+        }
+
+        .resume-header::before {
+            right: -80px;
+        }
+
+        .resume-header::after {
+            left: -60px;
+        }
+    }
+
+    /* Print remains clean */
+    @media print {
+        body {
+            background: white !important;
+        }
+
+        .resume-content>h2,
+        .resume-content>p,
+        .education-card,
+        .project-card,
+        .language-list li {
+            animation: none !important;
+        }
+    }
+
+
+    /* ===== EXTRA PROFESSIONAL CSS ===== */
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #0f4c81;
+        --navy: #082f49;
+        --text: #1f2937;
+        --muted: #64748b;
+        --card: #ffffff;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .resume {
+        isolation: isolate;
+    }
+
+    .resume-header {
+        background:
+            radial-gradient(circle at 85% 20%, rgba(255, 255, 255, .18), transparent 22%),
+            radial-gradient(circle at 15% 90%, rgba(125, 211, 252, .15), transparent 25%),
+            linear-gradient(135deg, #020b2d 0%, #0f4c81 48%, #2563eb 100%);
+    }
+
+    .resume-header h1 {
+        background: linear-gradient(90deg, #fff, #dbeafe);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .contact-bar {
+        justify-content: center;
+    }
+
+    .contact-bar a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .resume-content {
+        background: rgba(255, 255, 255, .72);
+    }
+
+    .section-title {
+        font-size: clamp(19px, 2.5vw, 22px);
+    }
+
+    .education-card,
+    .project-card,
+    .cert-card {
+        background: linear-gradient(145deg, #ffffff, #f5f9ff);
+    }
+
+    .education-card h3,
+    .project-card h3 {
+        position: relative;
+    }
+
+    .education-card h3::after,
+    .project-card h3::after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 3px;
+        margin: 7px auto 0;
+        border-radius: 10px;
+        background: var(--primary);
+    }
+
+    .project-card h3::after {
+        margin-left: 0;
+    }
+
+    .skill {
+        user-select: none;
+    }
+
+    .profile-links a,
+    .download-btn {
+        border: 0;
+        cursor: pointer;
+    }
+
+    .download-area {
+        background: linear-gradient(180deg, transparent, #f8fbff);
+    }
+
+    .download-btn {
+        margin: 4px;
+    }
+
+    .download-btn a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .resume-footer {
+        background: linear-gradient(135deg, #061d2e, #082f49, #0f4c81);
+    }
+
+    @media (max-width:600px) {
+        body {
+            padding: 6px;
+        }
+
+        .resume-header {
+            min-height: auto;
+        }
+
+        .contact-bar {
+            align-items: stretch;
+        }
+
+        .contact-bar a {
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .resume-content p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .education-grid,
+        .project-grid,
+        .cert-grid {
+            gap: 12px;
+        }
+
+        .education-card,
+        .project-card,
+        .cert-card {
+            padding: 16px;
+        }
+
+        .profile-links {
+            justify-content: center;
+        }
+
+        .profile-links a,
+        .download-btn {
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+        }
+    }
+
+    @media print {
+        .resume-content {
+            background: white !important;
+        }
+
+        .education-card,
+        .project-card,
+        .cert-card {
+            box-shadow: none !important;
+            background: white !important;
+            border: 1px solid #ddd;
+        }
+    }
 </style>
 
 
@@ -842,8 +1575,6 @@ a.percentage:hover {
 
 
         </div>
-
-
         <!-- CONTENT -->
 
         <main class="resume-content">
@@ -889,18 +1620,18 @@ a.percentage:hover {
 
 
                     <p>
+                        <span class="percentage">
 
-                        Saraswati Madhyamik
-                        Vidyalaya, Akurdi
+                            <a href="ssc.jpeg" target="_blank">
+                                Saraswati Madhyamik
+                                Vidyalaya, Akurdi
+                            </a>
+
+                        </span>
 
                     </p>
 
 
-                    <span class="percentage">
-
-                        <a href="ssc.jpeg" target="_blank">S.S.C</a>
-
-                    </span>
 
 
                     <p>
@@ -923,17 +1654,18 @@ a.percentage:hover {
 
                     <p>
 
-                        Shri Mahalakshmi
-                        Vidyalaya, Akurdi
+                        <span class="percentage">
+
+                            <a href="H.S.C.jpeg" target="_blank"> Shri Mahalakshmi
+                                Vidyalaya, Akurdi
+                            </a>
+
+                        </span>
+
+
 
                     </p>
 
-
-                    <span class="percentage">
-
-                        <a href="H.S.C.jpeg" target="_blank">H.S.C</a>
-
-                    </span>
 
 
                     <p>
@@ -956,18 +1688,18 @@ a.percentage:hover {
 
                     <p>
 
-                        Savitribai Phule
-                        Pune
-                        University
+                        <span class="percentage">
+
+                            <a href="graduation.jpeg" target="_blank">Savitribai Phule
+                                Pune
+                                University
+                            </a>
+
+                        </span>
 
                     </p>
 
 
-                    <span class="percentage">
-
-                        <a href="graduation.jpeg" target="_blank">B.Sc</a>
-
-                    </span>
 
 
                     <p>
@@ -1015,7 +1747,20 @@ a.percentage:hover {
 
                 <span class="skill">
 
-                    Bsic Excel
+                    Basic Excel
+
+                </span>
+
+            
+                <span class="skill">
+
+                    Git & GitHub
+
+                </span>
+
+                <span class="skill">
+
+                    Basic Computer Knowledge
 
                 </span>
 
@@ -1023,6 +1768,41 @@ a.percentage:hover {
 
 
             </div>
+            <!-- PROJECTS -->
+
+            <h2 class="section-title">
+                Projects
+            </h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Suryawanshi Government Career Portal</h3>
+                    <p>
+                        Designed and developed a responsive career portal to
+                        organize government job, scholarship and career
+                        information in a simple and user-friendly format.
+                    </p>
+                    <div class="skills" style="margin-top:12px;">
+                        <span class="skill">VIew</span>
+                      
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Personal Resume Website</h3>
+                    <p>
+                        Created a responsive personal resume website showcasing
+                        education, technical skills, projects and contact
+                        details with a clean professional design.
+                    </p>
+                    <div class="skills" style="margin-top:12px;">
+                       <span class="skill">VIew</span>
+                    </div>
+                </div>
+
+            </div>
+
 
 
             <!-- EXPERIENCE -->
@@ -1043,6 +1823,31 @@ a.percentage:hover {
 
             </p>
 
+            <!-- SOFT SKILLS -->
+
+            <h2 class="section-title">
+                Strengths
+            </h2>
+
+            <div class="soft-skills">
+                <span class="skill">Communication</span>
+                <span class="skill">Teamwork</span>
+                <span class="skill">Problem Solving</span>
+                <span class="skill">Time Management</span>
+                <span class="skill">Quick Learning</span>
+                <span class="skill">Positive Attitude</span>
+            </div>
+
+            <!-- PROFILE LINKS -->
+
+            <h2 class="section-title">
+                Online Profiles
+            </h2>
+
+            <div class="profile-links">
+                <a href="https://github.com/" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            </div>
 
             <!-- LANGUAGES -->
 
@@ -1068,11 +1873,31 @@ a.percentage:hover {
 
                 </li>
 
+                <li>
+
+                    English
+
+                </li>
+
             </ul>
 
 
         </main>
 
+
+
+        <!-- PRINT / PDF -->
+        <div class="download-area">
+            <h2 class="section-title">
+                Resume Download
+            </h2>
+            <button class="download-btn" onclick="window.print()">
+                ACTIVE PDF
+            </button>
+            <button class="download-btn">
+                <a href="Suryawanshi.CV.pdf" download="Resume">PDF</a>
+            </button>
+        </div>
 
         <!-- FOOTER -->
 
@@ -1086,6 +1911,12 @@ a.percentage:hover {
 
     </div>
 
+
+    <script>
+        function printResume() {
+            window.print();
+        }
+    </script>
 
 </body>
 
