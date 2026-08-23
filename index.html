@@ -268,57 +268,251 @@
             scale(1.06);
 
     }
+    
+
+    /* Bold Text */
+    .project-card strong {
+        font-weight: 700;
+        color: #222;
+    }
+
+    /* Profile Image */
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #2563eb;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+
+        .resume-header {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header-info h1 {
+            font-size: 26px;
+        }
+
+        .job-title {
+            font-size: 16px;
+        }
+
+        .about-me {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+        }
+    }
 
 
-    /* ==================================
-   CONTACT BAR
-================================== */
+  /* =====================================================
+   PREMIUM CONTACT BAR
+   Static Background • Professional • Responsive
+===================================================== */
+
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    padding: 18px 25px;
+    margin: 20px 0;
+
+    /* Premium Static Background */
+    background: linear-gradient(
+        135deg,
+        #f8fbff 0%,
+        #eef5ff 50%,
+        #f8fbff 100%
+    );
+
+    border: 1px solid #d7e3f4;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =====================================================
+   CONTACT LINKS
+===================================================== */
+
+.contact-bar a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    color: #1e293b;
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow:
+        0 3px 8px rgba(15, 23, 42, 0.06);
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   STRONG TEXT
+===================================================== */
+
+.contact-bar a strong {
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   HOVER EFFECT
+===================================================== */
+
+.contact-bar a:hover {
+    transform: translateY(-4px);
+
+    background: #ffffff;
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.15);
+}
+
+
+/* =====================================================
+   UNDERLINE
+===================================================== */
+
+.contact-bar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+    bottom: 5px;
+
+    height: 2px;
+
+    background: #2563eb;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+}
+
+.contact-bar a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =====================================================
+   DIFFERENT HOVER COLORS
+===================================================== */
+
+/* Phone */
+.contact-bar a:nth-child(1):hover {
+    color: #16a34a;
+    border-color: #86efac;
+}
+
+.contact-bar a:nth-child(1)::after {
+    background: #16a34a;
+}
+
+
+/* Email */
+.contact-bar a:nth-child(2):hover {
+    color: #7c3aed;
+    border-color: #c4b5fd;
+}
+
+.contact-bar a:nth-child(2)::after {
+    background: #7c3aed;
+}
+
+
+/* Location */
+.contact-bar a:nth-child(3):hover {
+    color: #ea580c;
+    border-color: #fdba74;
+}
+
+.contact-bar a:nth-child(3)::after {
+    background: #ea580c;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
 
     .contact-bar {
-
-        display:
-            flex;
-
-        flex-wrap:
-            wrap;
-
-        gap:
-            15px;
-
-        padding:
-            20px 40px;
-
-        color:
-            white;
-
-        background:
-            #082f49;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 12px;
+        border-radius: 15px;
     }
-
 
     .contact-bar a {
-
-        color:
-            white;
-
-        text-decoration:
-            none;
-
-        font-size:
-            14px;
-
-        transition:
-            0.3s;
+        width: 90%;
+        font-size: 14px;
+        padding: 11px 14px;
     }
-
 
     .contact-bar a:hover {
+        transform: translateY(-2px);
+    }
+}
 
-        color:
-            #7dd3fc;
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .contact-bar {
+        padding: 15px 10px;
     }
 
-
+    .contact-bar a {
+        width: 100%;
+        font-size: 13px;
+    }
+}
     /* ==================================
    MAIN CONTENT
 ================================== */
@@ -548,38 +742,38 @@
             12px;
     }
 
-.skill {
-    display: inline-block;
-    padding: 9px 17px;
+    .skill {
+        display: inline-block;
+        padding: 9px 17px;
 
-    color: #0f4c81;
-    background: #eaf3ff;
+        color: #0f4c81;
+        background: #eaf3ff;
 
-    border: 1px solid #bfdbfe;
-    border-radius: 30px;
+        border: 1px solid #bfdbfe;
+        border-radius: 30px;
 
-    font-size: 14px;
-    font-weight: 600;
+        font-size: 14px;
+        font-weight: 600;
 
-    text-decoration: none;
-    border-bottom: none;
+        text-decoration: none;
+        border-bottom: none;
 
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
 
-.skill:hover,
-.skill:focus,
-.skill:active,
-.skill:visited {
-    color: white;
-    background: #2563eb;
+    .skill:hover,
+    .skill:focus,
+    .skill:active,
+    .skill:visited {
+        color: white;
+        background: #2563eb;
 
-    text-decoration: none;
-    border-bottom: none;
+        text-decoration: none;
+        border-bottom: none;
 
-    transform: translateY(-4px);
-}
+        transform: translateY(-4px);
+    }
 
     /* ==================================
    LANGUAGE
@@ -952,6 +1146,244 @@
         overflow: hidden;
     }
 
+    .resume-content>h2,
+    .resume-content>p,
+    .education-card,
+    .project-card,
+    .language-list li {
+        animation: contentReveal .7s ease both;
+    }
+
+    .education-card:nth-child(2),
+    .project-card:nth-child(2) {
+        animation-delay: .08s;
+    }
+
+    @keyframes contentReveal {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Better mobile spacing */
+    @media (max-width: 768px) {
+        .section-title::after {
+            display: none;
+        }
+
+        .contact-bar a {
+            padding: 9px 10px;
+        }
+
+        .resume-header::before {
+            right: -80px;
+        }
+
+        .resume-header::after {
+            left: -60px;
+        }
+    }
+
+    /* Print remains clean */
+    @media print {
+        body {
+            background: white !important;
+        }
+
+        .resume-content>h2,
+        .resume-content>p,
+        .education-card,
+        .project-card,
+        .language-list li {
+            animation: none !important;
+        }
+    }
+
+
+    /* ===== EXTRA PROFESSIONAL CSS ===== */
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #0f4c81;
+        --navy: #082f49;
+        --text: #1f2937;
+        --muted: #64748b;
+        --card: #ffffff;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .resume {
+        isolation: isolate;
+    }
+
+    .resume-header {
+        background:
+            radial-gradient(circle at 85% 20%, rgba(255, 255, 255, .18), transparent 22%),
+            radial-gradient(circle at 15% 90%, rgba(125, 211, 252, .15), transparent 25%),
+            linear-gradient(135deg, #020b2d 0%, #0f4c81 48%, #2563eb 100%);
+    }
+
+    .resume-header h1 {
+        background: linear-gradient(90deg, #fff, #dbeafe);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .contact-bar {
+        justify-content: center;
+    }
+
+    .contact-bar a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .resume-content {
+        background: rgba(255, 255, 255, .72);
+    }
+
+    .section-title {
+        font-size: clamp(19px, 2.5vw, 22px);
+    }
+
+    .education-card,
+    .project-card,
+    .cert-card {
+        background: linear-gradient(145deg, #ffffff, #f5f9ff);
+    }
+
+    .education-card h3,
+    .project-card h3 {
+        position: relative;
+    }
+
+    .education-card h3::after,
+    .project-card h3::after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 3px;
+        margin: 7px auto 0;
+        border-radius: 10px;
+        background: var(--primary);
+    }
+
+    .project-card h3::after {
+        margin-left: 0;
+    }
+
+    .skill {
+        user-select: none;
+    }
+
+    .profile-links a,
+    .download-btn {
+        border: 0;
+        cursor: pointer;
+    }
+
+    .download-area {
+        background: linear-gradient(180deg, transparent, #f8fbff);
+    }
+
+    .download-btn {
+        margin: 4px;
+    }
+
+    .download-btn a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .resume-footer {
+        background: linear-gradient(135deg, #061d2e, #082f49, #0f4c81);
+    }
+
+    @media (max-width:600px) {
+        body {
+            padding: 6px;
+        }
+
+        .resume-header {
+            min-height: auto;
+        }
+
+        .contact-bar {
+            align-items: stretch;
+        }
+
+        .contact-bar a {
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .resume-content p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .education-grid,
+        .project-grid,
+        .cert-grid {
+            gap: 12px;
+        }
+
+        .education-card,
+        .project-card,
+        .cert-card {
+            padding: 16px;
+        }
+
+        .profile-links {
+            justify-content: center;
+        }
+
+        .profile-links a,
+        .download-btn {
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+        }
+    }
+
+    @media print {
+        .resume-content {
+            background: white !important;
+        }
+
+        .education-card,
+        .project-card,
+        .cert-card {
+            box-shadow: none !important;
+            background: white !important;
+            border: 1px solid #ddd;
+        }
+    }
+
+
+
+    /* oneline button  */
+    .fab.fa-instagram {
+        font-size: 18px;
+        margin-right: 6px;
+        vertical-align: middle;
+        transition: 0.3s ease;
+    }
+
+    .instagram-btn:hover .fab.fa-instagram {
+        transform: scale(1.15);
+    }
+
     .education-card::before,
     .project-card::before,
     .cert-card::before {
@@ -1273,243 +1705,6 @@
     }
 
     /* Subtle entrance animation */
-    .resume-content>h2,
-    .resume-content>p,
-    .education-card,
-    .project-card,
-    .language-list li {
-        animation: contentReveal .7s ease both;
-    }
-
-    .education-card:nth-child(2),
-    .project-card:nth-child(2) {
-        animation-delay: .08s;
-    }
-
-    @keyframes contentReveal {
-        from {
-            opacity: 0;
-            transform: translateY(12px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Better mobile spacing */
-    @media (max-width: 768px) {
-        .section-title::after {
-            display: none;
-        }
-
-        .contact-bar a {
-            padding: 9px 10px;
-        }
-
-        .resume-header::before {
-            right: -80px;
-        }
-
-        .resume-header::after {
-            left: -60px;
-        }
-    }
-
-    /* Print remains clean */
-    @media print {
-        body {
-            background: white !important;
-        }
-
-        .resume-content>h2,
-        .resume-content>p,
-        .education-card,
-        .project-card,
-        .language-list li {
-            animation: none !important;
-        }
-    }
-
-
-    /* ===== EXTRA PROFESSIONAL CSS ===== */
-    :root {
-        --primary: #2563eb;
-        --primary-dark: #0f4c81;
-        --navy: #082f49;
-        --text: #1f2937;
-        --muted: #64748b;
-        --card: #ffffff;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .resume {
-        isolation: isolate;
-    }
-
-    .resume-header {
-        background:
-            radial-gradient(circle at 85% 20%, rgba(255, 255, 255, .18), transparent 22%),
-            radial-gradient(circle at 15% 90%, rgba(125, 211, 252, .15), transparent 25%),
-            linear-gradient(135deg, #020b2d 0%, #0f4c81 48%, #2563eb 100%);
-    }
-
-    .resume-header h1 {
-        background: linear-gradient(90deg, #fff, #dbeafe);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .contact-bar {
-        justify-content: center;
-    }
-
-    .contact-bar a {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .resume-content {
-        background: rgba(255, 255, 255, .72);
-    }
-
-    .section-title {
-        font-size: clamp(19px, 2.5vw, 22px);
-    }
-
-    .education-card,
-    .project-card,
-    .cert-card {
-        background: linear-gradient(145deg, #ffffff, #f5f9ff);
-    }
-
-    .education-card h3,
-    .project-card h3 {
-        position: relative;
-    }
-
-    .education-card h3::after,
-    .project-card h3::after {
-        content: "";
-        display: block;
-        width: 35px;
-        height: 3px;
-        margin: 7px auto 0;
-        border-radius: 10px;
-        background: var(--primary);
-    }
-
-    .project-card h3::after {
-        margin-left: 0;
-    }
-
-    .skill {
-        user-select: none;
-    }
-
-    .profile-links a,
-    .download-btn {
-        border: 0;
-        cursor: pointer;
-    }
-
-    .download-area {
-        background: linear-gradient(180deg, transparent, #f8fbff);
-    }
-
-    .download-btn {
-        margin: 4px;
-    }
-
-    .download-btn a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .resume-footer {
-        background: linear-gradient(135deg, #061d2e, #082f49, #0f4c81);
-    }
-
-    @media (max-width:600px) {
-        body {
-            padding: 6px;
-        }
-
-        .resume-header {
-            min-height: auto;
-        }
-
-        .contact-bar {
-            align-items: stretch;
-        }
-
-        .contact-bar a {
-            justify-content: center;
-            font-size: 13px;
-        }
-
-        .resume-content p {
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .education-grid,
-        .project-grid,
-        .cert-grid {
-            gap: 12px;
-        }
-
-        .education-card,
-        .project-card,
-        .cert-card {
-            padding: 16px;
-        }
-
-        .profile-links {
-            justify-content: center;
-        }
-
-        .profile-links a,
-        .download-btn {
-            width: 100%;
-            max-width: 280px;
-            text-align: center;
-        }
-    }
-
-    @media print {
-        .resume-content {
-            background: white !important;
-        }
-
-        .education-card,
-        .project-card,
-        .cert-card {
-            box-shadow: none !important;
-            background: white !important;
-            border: 1px solid #ddd;
-        }
-    }
-
-
-
-    /* oneline button  */
-    .fab.fa-instagram {
-        font-size: 18px;
-        margin-right: 6px;
-        vertical-align: middle;
-        transition: 0.3s ease;
-    }
-
-    .instagram-btn:hover .fab.fa-instagram {
-        transform: scale(1.15);
-    }
 </style>
 
 
@@ -1520,68 +1715,67 @@
 
 
         <!-- HEADER -->
-
         <header class="resume-header">
-
 
             <div class="header-info">
 
                 <h1>
-
-                    Rahul Kahinath
-                    Suryawanshi
-
+                    Rahul Kashinath Suryawanshi
                 </h1>
 
 
-                <p class="job-title">
-
-
-
-
-                </p>
 
             </div>
 
-
-
             <img src="2.jpeg" alt="Rahul Suryawanshi" class="profile-image">
-
 
         </header>
 
 
         <!-- CONTACT -->
+<div class="contact-bar">
 
-        <div class="contact-bar">
+    <a href="tel:9730286038">
+        📞 <strong>9730286038</strong>
+    </a>
 
+    <a href="mailto:suryawanshirahul0302@gmail.com">
+        ✉️ <strong>suryawanshirahul0302@gmail.com</strong>
+    </a>
 
-            <a href="tel:9730286038">
+    <a href="https://maps.app.goo.gl/Hh2zrbSULcUS8We5A" target="_blank">
+        📍 <strong>Akurdi, Pune</strong>
+    </a>
 
-                📞 9730286038
-
-            </a>
-
-
-            <a href="mailto:suryawanshirahul0302@gmail.com">
-
-                ✉️ suryawanshirahul0302@gmail.com
-
-            </a>
-
-
-            <a href="https://maps.app.goo.gl/Hh2zrbSULcUS8We5A" target="_blank">
-
-                📍 Akurdi, Pune
-
-            </a>
-
-
-        </div>
+</div>
         <!-- CONTENT -->
 
         <main class="resume-content">
+            <!-- about me -->
+            <h2 class="section-title">
 
+                Introduction
+
+            </h2>
+
+            <p class="project-card">
+                My name is <strong>Rahul Kashinath Suryawanshi</strong>
+                and I am from <strong>Akurdi, Pune</strong>.
+
+                I have completed my <strong>B.Sc </strong> in<strong> Chemistry</strong>.
+
+                I have knowledge of <strong>HTML, CSS </strong> and<strong> SQL</strong>,
+                and I am interested in <strong>Web Development</strong>.
+
+                I consider myself a <strong>quick learner</strong> with good
+                <strong>time management</strong>
+
+                My hobby is <strong>playing cricket</strong>.
+
+                My career goal is to <strong>improve my technical skills</strong>
+                <strong>grow in my career</strong> and
+                contribute to the <strong> growth of the company </strong>.
+            </p>
 
             <!-- OBJECTIVE -->
 
@@ -1593,10 +1787,12 @@
 
 
             <p>
-            
-                <b>B.Sc Chemistry</b> graduate with a strong interest in <strong>Web Development</strong> and SQL. I have hands-on knowledge of
-                HTML, CSS, SQL and basic Excel, and I enjoy building responsive and user-friendly websites.
-            
+
+            <p>
+                To start my <strong>career</strong> in the <strong>IT industry</strong>, enhance my technical skills,
+                and grow professionally while
+                contributing to the organization.
+
             </p>
 
 
@@ -1885,11 +2081,7 @@
 
                 </li>
 
-                <li>
-
-                    English
-
-                </li>
+              
 
             </ul>
 
