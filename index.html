@@ -268,7 +268,7 @@
             scale(1.06);
 
     }
-    
+
 
     /* Bold Text */
     .project-card strong {
@@ -315,204 +315,203 @@
     }
 
 
-  /* =====================================================
+    /* =====================================================
    PREMIUM CONTACT BAR
    Static Background • Professional • Responsive
 ===================================================== */
 
-.contact-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
+    .contact-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
 
-    padding: 18px 25px;
-    margin: 20px 0;
+        padding: 18px 25px;
+        margin: 20px 0;
 
-    /* Premium Static Background */
-    background: linear-gradient(
-        135deg,
-        #f8fbff 0%,
-        #eef5ff 50%,
-        #f8fbff 100%
-    );
+        /* Premium Static Background */
+        background: linear-gradient(135deg,
+                #27b2d5 0%,
+                #eef5ff 50%,
+                #3262a1 90%);
 
-    border: 1px solid #d7e3f4;
-    border-radius: 18px;
+        border: 1px solid #d7e3f4;
+        border-radius: 18px;
 
-    box-shadow:
-        0 8px 25px rgba(37, 99, 235, 0.10);
-}
+        box-shadow:
+            0 8px 25px rgba(37, 99, 235, 0.10);
+    }
 
 
-/* =====================================================
+    /* =====================================================
    CONTACT LINKS
 ===================================================== */
 
-.contact-bar a {
-    position: relative;
+    .contact-bar a {
+        position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
 
-    padding: 10px 16px;
+        padding: 10px 16px;
 
-    color: #1e293b;
-    background: rgba(255, 255, 255, 0.85);
+        color: #1e293b;
+        background: rgba(255, 255, 255, 0.85);
 
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
 
-    text-decoration: none;
+        text-decoration: none;
 
-    font-size: 14px;
-    font-weight: 500;
+        font-size: 14px;
+        font-weight: 500;
 
-    box-shadow:
-        0 3px 8px rgba(15, 23, 42, 0.06);
+        box-shadow:
+            0 3px 8px rgba(15, 23, 42, 0.06);
 
-    transition:
-        color 0.3s ease,
-        background 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease,
-        transform 0.3s ease;
-}
+        transition:
+            color 0.3s ease,
+            background 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
+    }
 
 
-/* =====================================================
+    /* =====================================================
    STRONG TEXT
 ===================================================== */
 
-.contact-bar a strong {
-    font-weight: 600;
-}
+    .contact-bar a strong {
+        font-weight: 600;
+    }
 
 
-/* =====================================================
+    /* =====================================================
    HOVER EFFECT
 ===================================================== */
 
-.contact-bar a:hover {
-    transform: translateY(-4px);
+    .contact-bar a:hover {
+        transform: translateY(-4px);
 
-    background: #ffffff;
+        background: #f4f3f4;
 
-    border-color: #93c5fd;
+        border-color: #93c5fd;
 
-    box-shadow:
-        0 8px 20px rgba(37, 99, 235, 0.15);
-}
+        box-shadow:
+            0 8px 20px rgba(37, 99, 235, 0.15);
+    }
 
 
-/* =====================================================
+    /* =====================================================
    UNDERLINE
 ===================================================== */
 
-.contact-bar a::after {
-    content: "";
+    .contact-bar a::after {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    left: 14px;
-    right: 14px;
-    bottom: 5px;
+        left: 14px;
+        right: 14px;
+        bottom: 5px;
 
-    height: 2px;
+        height: 2px;
 
-    background: #2563eb;
+        background: #2563eb;
 
-    transform: scaleX(0);
-    transform-origin: center;
+        transform: scaleX(0);
+        transform-origin: center;
 
-    transition: transform 0.3s ease;
-}
+        transition: transform 0.3s ease;
+    }
 
-.contact-bar a:hover::after {
-    transform: scaleX(1);
-}
+    .contact-bar a:hover::after {
+        transform: scaleX(1);
+    }
 
 
-/* =====================================================
+    /* =====================================================
    DIFFERENT HOVER COLORS
 ===================================================== */
 
-/* Phone */
-.contact-bar a:nth-child(1):hover {
-    color: #16a34a;
-    border-color: #86efac;
-}
+    /* Phone */
+    .contact-bar a:nth-child(1):hover {
+        color: #16a34a;
+        border-color: #86efac;
+    }
 
-.contact-bar a:nth-child(1)::after {
-    background: #16a34a;
-}
-
-
-/* Email */
-.contact-bar a:nth-child(2):hover {
-    color: #7c3aed;
-    border-color: #c4b5fd;
-}
-
-.contact-bar a:nth-child(2)::after {
-    background: #7c3aed;
-}
+    .contact-bar a:nth-child(1)::after {
+        background: #16a34a;
+    }
 
 
-/* Location */
-.contact-bar a:nth-child(3):hover {
-    color: #ea580c;
-    border-color: #fdba74;
-}
+    /* Email */
+    .contact-bar a:nth-child(2):hover {
+        color: #7c3aed;
+        border-color: #c4b5fd;
+    }
 
-.contact-bar a:nth-child(3)::after {
-    background: #ea580c;
-}
+    .contact-bar a:nth-child(2)::after {
+        background: #7c3aed;
+    }
 
 
-/* =====================================================
+    /* Location */
+    .contact-bar a:nth-child(3):hover {
+        color: #ea580c;
+        border-color: #fdba74;
+    }
+
+    .contact-bar a:nth-child(3)::after {
+        background: #ea580c;
+    }
+
+
+    /* =====================================================
    MOBILE RESPONSIVE
 ===================================================== */
 
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
 
-    .contact-bar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 18px 12px;
-        border-radius: 15px;
+        .contact-bar {
+            flex-direction: column;
+            gap: 12px;
+            padding: 18px 12px;
+            border-radius: 15px;
+        }
+
+        .contact-bar a {
+            width: 90%;
+            font-size: 14px;
+            padding: 11px 14px;
+        }
+
+        .contact-bar a:hover {
+            transform: translateY(-2px);
+        }
     }
 
-    .contact-bar a {
-        width: 90%;
-        font-size: 14px;
-        padding: 11px 14px;
-    }
 
-    .contact-bar a:hover {
-        transform: translateY(-2px);
-    }
-}
-
-
-/* =====================================================
+    /* =====================================================
    SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 480px) {
+    @media (max-width: 480px) {
 
-    .contact-bar {
-        padding: 15px 10px;
+        .contact-bar {
+            padding: 15px 10px;
+        }
+
+        .contact-bar a {
+            width: 100%;
+            font-size: 13px;
+        }
     }
 
-    .contact-bar a {
-        width: 100%;
-        font-size: 13px;
-    }
-}
     /* ==================================
    MAIN CONTENT
 ================================== */
@@ -635,16 +634,15 @@
 
     .education-card:hover {
 
+        background-color: rgb(11, 102, 248);
+
         transform:
 
             translateY(-7px);
 
         box-shadow:
 
-            0 15px 30px rgba(37,
-                99,
-                235,
-                0.18);
+            0 15px 30px rgba(17, 45, 105, 0.659);
     }
 
 
@@ -706,7 +704,6 @@
     .percentage:hover {
         text-decoration: none !important;
         color: #1d4ed8;
-
         transform: translateY(-2px);
         box-shadow: none;
     }
@@ -1733,21 +1730,21 @@
 
 
         <!-- CONTACT -->
-<div class="contact-bar">
+        <div class="contact-bar">
 
-    <a href="tel:9730286038">
-        📞 <strong>9730286038</strong>
-    </a>
+            <a href="tel:9730286038">
+                📞 <strong>9730286038</strong>
+            </a>
 
-    <a href="mailto:suryawanshirahul0302@gmail.com">
-        ✉️ <strong>suryawanshirahul0302@gmail.com</strong>
-    </a>
+            <a href="mailto:suryawanshirahul0302@gmail.com">
+                ✉️ <strong>suryawanshirahul0302@gmail.com</strong>
+            </a>
 
-    <a href="https://maps.app.goo.gl/Hh2zrbSULcUS8We5A" target="_blank">
-        📍 <strong>Akurdi, Pune</strong>
-    </a>
+            <a href="https://maps.app.goo.gl/Hh2zrbSULcUS8We5A" target="_blank">
+                📍 <strong>Akurdi, Pune</strong>
+            </a>
 
-</div>
+        </div>
         <!-- CONTENT -->
 
         <main class="resume-content">
@@ -1933,7 +1930,7 @@
 
                 <span class="skill">
 
-                    CSS
+                    CSS Basic
 
                 </span>
 
@@ -1945,7 +1942,7 @@
 
                 <span class="skill">
 
-                    Basic Excel
+                     Excel
 
                 </span>
 
@@ -1956,12 +1953,7 @@
 
                 </span>
 
-                <span class="skill">
-
-                    Basic Computer Knowledge
-
-                </span>
-
+                
 
 
 
@@ -2047,15 +2039,16 @@
                     GitHub
                 </a>
 
-                <a href="https://www.instagram.com/suryawanshii_rahull/" target="_blank" class="instagram-btn">
-                    <i class="fab fa-instagram"></i>
-                    Instagram
-                </a>
-
                 <a href="https://twitter.com/RAHULSU77040323/" target="_blank" class="twitter-btn">
                     <i class="fa-brands fa-x-twitter"></i>
                     Twitter
                 </a>
+
+                <a href="https://www.linkedin.com/in/rahul-kashinath-suryawanshi" target="_blank" class="linkedin-btn">
+                    <i class="fab fa-linkedin"></i>
+                    Linked
+                </a>
+
             </div>
             <!-- LANGUAGES -->
 
@@ -2081,7 +2074,7 @@
 
                 </li>
 
-              
+
 
             </ul>
 
